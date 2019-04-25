@@ -3,7 +3,7 @@ Year,Month,Day,Letter,To,From,Mention Type,Sent.,About
 55,1,,Fam. 1.8,P. Lentulus Spinther,Cicero,Mention,1,"Cicero writes that he is affiliating himself with Pompey. Lentulus is well regarded by Pompey, too. Mentions great affection for Pompey.: Positive."
 55,4,20,Att. 4.10,Atticus,Cicero,Mention,1,Cicero hints to Atticus (without naming specifically) that he must align with Pompey in the current political situation. Pompey asked Cicero to call on him; Cicero is going to visit him.
 55,4,28,Att. 4.9,Atticus,Cicero,Mention,1,"Cicero writes about political discussion with Pompey, who called on him, and treated him very well."
-55,4,,Att. 4.11,Atticus,Cicero,0,0,Cicero mentions Pompey and Crassus were going to Rome together to settle accounts.
+55,4,,Att. 4.11,Atticus,Cicero,Mention,0,Cicero mentions Pompey and Crassus were going to Rome together to settle accounts.
 55,10,,Fam. 7.1,M. Marius,Cicero,Reference,0,"I believe Cicero is describing games put on by Pompey in his second consulship, perhaps to celebrate the dedication of the Theater of Pompey. (Marius asked Cicero to make him feel better for having missed the games)."
 ,,,,,,,,
 54,2,15,Q. fr. 2.11,Quintus Cicero,Cicero,Mention,-1,"""As to Pompey, I agree with you, or rather you agree with me. For, as you know, I have long been singing the praises of your Caesar. Believe me, he is very close to my heart, and I am not going to let him slip from his place."" -- Confusing!"
@@ -25,7 +25,7 @@ Year,Month,Day,Letter,To,From,Mention Type,Sent.,About
 ,,,,,,,,
 53,5,19,Fam. 16.10,Tiro,Cicero,Mention,1,Pompey is staying with Cicero. Cicero mentions he seems to be cheerful.
 ,,,,,,,,
-52,12,,Fam. 5.18,,,,,
+52,12,,Fam. 5.18,T. Fadius,Cicero,Reference,-1,"T. Fadius is exiled, and Cicero is consoling him. Cicero indicates that he was exiled because of Pompey's influence, and for no other reason."
 ,,,,,,,,
 51,3,,Fam. 13.75,Titus Titius,Cicero,Mention,1,Cicero obtained license for Avilianus to land his corn from Pompey while Pompey was in charge of that stuff
 51,12,,Fam. 7.2,M. Marius,Cicero,Reference,-1,Cicero talks about somebody in a trial who is insulting him. The trial was set up by Pompey? Kind of confused.
