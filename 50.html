@@ -1,0 +1,74 @@
+<html>
+<head>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+  <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+  <script type="text/javascript">
+    google.charts.load("upcoming", {packages:["timeline"]});
+    google.charts.setOnLoadCallback(drawChart);
+
+    function drawChart() {
+	var container = document.getElementById('timeline-tooltip');
+        var chart = new google.visualization.Timeline(container);
+        var dataTable = new google.visualization.DataTable();
+
+	dataTable.addColumn({ type: 'string', id: 'President' });
+        dataTable.addColumn({ type: 'string', id: 'dummy bar label' });
+        dataTable.addColumn({ type: 'string', role: 'tooltip' });
+        dataTable.addColumn({ type: 'date', id: 'Start' });
+        dataTable.addColumn({ type: 'date', id: 'End' });
+	
+dataTable.addRows([
+[ 'Positive', null, 'Fam. 3.7 (To: Appius Claudius Pulcher; From: Cicero)', new Date('1950-02-01'), new Date((new Date('1950-02-01')).getTime() + 1400*60000) ],
+[ 'Positive', null, 'Fam. 3.9 (To: Appius Claudius Pulcher; From: Cicero)', new Date('1950-02-01'), new Date((new Date('1950-02-01')).getTime() + 1400*60000) ],
+[ 'Positive', null, 'Fam. 3.10 (To: Appius Claudius Pulcher; From: Cicero)', new Date('1950-05-01'), new Date((new Date('1950-05-01')).getTime() + 1400*60000) ],
+[ 'Positive', null, 'Att. 6.2 (To: Atticus; From: Cicero)', new Date('1950-05-07'), new Date((new Date('1950-05-07')).getTime() + 1400*60000) ],
+[ 'Positive', null, 'Fam. 2.13 (To: M. Caelius Rufus; From: Cicero)', new Date('1950-05-01'), new Date((new Date('1950-05-01')).getTime() + 1400*60000) ],
+[ 'Positive', null, 'Att. 6.3 (To: Atticus; From: Cicero)', new Date('1950-06-01'), new Date((new Date('1950-06-01')).getTime() + 1400*60000) ],
+[ 'Positive', null, 'Fam. 3.11 (To: Appius Claudius Pulcher; From: Cicero)', new Date('1950-06-01'), new Date((new Date('1950-06-01')).getTime() + 1400*60000) ],
+[ 'Positive', null, 'Fam. 2.15 (To: M. Caelius Rufus; From: Cicero)', new Date('1950-08-01'), new Date((new Date('1950-08-01')).getTime() + 1400*60000) ],
+[ 'Positive', null, 'Att. 7.2 (To: Atticus; From: Cicero)', new Date('1950-11-25'), new Date((new Date('1950-11-25')).getTime() + 1400*60000) ],
+[ 'Positive', null, 'Att. 7.3 (To: Atticus; From: Cicero)', new Date('1950-12-09'), new Date((new Date('1950-12-09')).getTime() + 1400*60000) ],
+[ 'Neutral', null, 'Att. 5.21 (To: Atticus; From: Cicero)', new Date('1950-02-13'), new Date((new Date('1950-02-13')).getTime() + 1400*60000) ],
+[ 'Neutral', null, 'Att. 6.1 (To: Atticus; From: Cicero)', new Date('1950-02-22'), new Date((new Date('1950-02-22')).getTime() + 1400*60000) ],
+[ 'Neutral', null, 'Fam. 8.6 (To: Cicero; From: M. Caelius Rufus)', new Date('1950-02-01'), new Date((new Date('1950-02-01')).getTime() + 1400*60000) ],
+[ 'Neutral', null, 'Fam. 8.11 (To: Cicero; From: M. Caelius Rufus)', new Date('1950-06-01'), new Date((new Date('1950-06-01')).getTime() + 1400*60000) ],
+[ 'Neutral', null, 'Fam. 8.13 (To: Cicero; From: M. Caelius Rufus)', new Date('1950-06-01'), new Date((new Date('1950-06-01')).getTime() + 1400*60000) ],
+[ 'Neutral', null, 'Fam. 8.14 (To: Cicero; From: M. Caelius Rufus)', new Date('1950-09-01'), new Date((new Date('1950-09-01')).getTime() + 1400*60000) ],
+[ 'Neutral', null, 'Att. 6.6 (To: Atticus; From: Cicero)', new Date('1950-08-02'), new Date((new Date('1950-08-02')).getTime() + 1400*60000) ],
+[ 'Neutral', null, 'Fam. 8.12 (To: Cicero; From: M. Caelius Rufus)', new Date('1950-09-01'), new Date((new Date('1950-09-01')).getTime() + 1400*60000) ],
+[ 'Neutral', null, 'Att. 6.8 (To: Atticus; From: Cicero)', new Date('1950-11-07'), new Date((new Date('1950-11-07')).getTime() + 1400*60000) ],
+[ 'Neutral', null, 'Att. 7.1 (To: Atticus; From: Cicero)', new Date('1950-10-01'), new Date((new Date('1950-10-01')).getTime() + 1400*60000) ],
+[ 'Neutral', null, 'Att. 7.7 (To: Atticus; From: Cicero)', new Date('1950-12-01'), new Date((new Date('1950-12-01')).getTime() + 1400*60000) ],
+[ 'Neutral', null, 'Att. 7.9 (To: Atticus; From: Cicero)', new Date('1950-12-27'), new Date((new Date('1950-12-27')).getTime() + 1400*60000) ],
+[ 'Negative', null, 'Att. 7.4 (To: Atticus; From: Cicero)', new Date('1950-12-11'), new Date((new Date('1950-12-11')).getTime() + 1400*60000) ],
+[ 'Negative', null, 'Att. 7.5 (To: Atticus; From: Cicero)', new Date('1950-12-01'), new Date((new Date('1950-12-01')).getTime() + 1400*60000) ],
+[ 'Negative', null, 'Att. 7.6 (To: Atticus; From: Cicero)', new Date('1950-12-01'), new Date((new Date('1950-12-01')).getTime() + 1400*60000) ],
+[ 'Negative', null, 'Att. 7.8 (To: Atticus; From: Cicero)', new Date('1950-12-26'), new Date((new Date('1950-12-26')).getTime() + 1400*60000) ]]);
+	      var options = {
+		  title: "Sentiment towards Pompey in Cicero's Corresponsance",
+		  timeline: {
+		      showBarLabels: false
+                  },
+                  colors: ['#7CFC00', '#3498db', '#c0392b']
+              };
+              chart.draw(dataTable, options);
+
+
+	      // When we have a select event, open the letter and deselect. 
+	      function selectHandler(e) {
+		  var selection = chart.getSelection();
+		  if (selection.length > 0) {
+		      var item = dataTable.getFormattedValue(selection[0].row, 2).split(" ");
+		      window.open('http://perseus.uchicago.edu/perseus-cgi/citequery3.pl?dbname=PerseusLatinTexts&getid=1&query=Cic.%20' + item[0] + '%20' + item[1], '_blank');
+		  }
+		  //chart.setSelection(null);
+	      }
+	      google.visualization.events.addListener(chart, 'select', selectHandler);
+	  }	  
+      
+  </script>
+</head>
+<body>
+  <div id="timeline-tooltip" style="width: 1200px; height: 900px; margin: auto;"></div>
+</body>
+</html>

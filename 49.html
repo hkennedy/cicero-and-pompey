@@ -1,0 +1,126 @@
+<html>
+<head>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+  <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+  <script type="text/javascript">
+    google.charts.load("upcoming", {packages:["timeline"]});
+    google.charts.setOnLoadCallback(drawChart);
+
+    function drawChart() {
+	var container = document.getElementById('timeline-tooltip');
+        var chart = new google.visualization.Timeline(container);
+        var dataTable = new google.visualization.DataTable();
+
+	dataTable.addColumn({ type: 'string', id: 'President' });
+        dataTable.addColumn({ type: 'string', id: 'dummy bar label' });
+        dataTable.addColumn({ type: 'string', role: 'tooltip' });
+        dataTable.addColumn({ type: 'date', id: 'Start' });
+        dataTable.addColumn({ type: 'date', id: 'End' });
+	
+dataTable.addRows([
+[ 'Positive', null, 'Fam. 16.11 (To: Tiro; From: Cicero)', new Date('1949-01-12'), new Date((new Date('1949-01-12')).getTime() + 1400*60000) ],
+[ 'Positive', null, 'Att. 7.17 (To: Atticus; From: Cicero)', new Date('1949-02-02'), new Date((new Date('1949-02-02')).getTime() + 1400*60000) ],
+[ 'Positive', null, 'Att. 7.18 (To: Atticus; From: Cicero)', new Date('1949-02-03'), new Date((new Date('1949-02-03')).getTime() + 1400*60000) ],
+[ 'Positive', null, 'Att. 8.11A (To: Cicero; From: Pompey)', new Date('1949-02-10'), new Date((new Date('1949-02-10')).getTime() + 1400*60000) ],
+[ 'Positive', null, 'Att. 7.25 (To: Atticus; From: Cicero)', new Date('1949-02-11'), new Date((new Date('1949-02-11')).getTime() + 1400*60000) ],
+[ 'Positive', null, 'Att. 7.26 (To: Atticus; From: Cicero)', new Date('1949-02-13'), new Date((new Date('1949-02-13')).getTime() + 1400*60000) ],
+[ 'Positive', null, 'Att. 8.11A (To: Pompey; From: Cicero)', new Date('1949-02-15'), new Date((new Date('1949-02-15')).getTime() + 1400*60000) ],
+[ 'Positive', null, 'Att. 8.11C (To: Cicero; From: Pompey)', new Date('1949-02-20'), new Date((new Date('1949-02-20')).getTime() + 1400*60000) ],
+[ 'Positive', null, 'Att. 8.6 (To: Atticus; From: Cicero)', new Date('1949-02-23'), new Date((new Date('1949-02-23')).getTime() + 1400*60000) ],
+[ 'Positive', null, 'Att. 9.10 (To: Atticus; From: Cicero)', new Date('1949-03-18'), new Date((new Date('1949-03-18')).getTime() + 1400*60000) ],
+[ 'Positive', null, 'Att. 9.12 (To: Atticus; From: Cicero)', new Date('1949-03-20'), new Date((new Date('1949-03-20')).getTime() + 1400*60000) ],
+[ 'Positive', null, 'Att. 10.10 (To: Atticus; From: Cicero)', new Date('1949-05-03'), new Date((new Date('1949-05-03')).getTime() + 1400*60000) ],
+[ 'Neutral', null, 'Fam. 5.20 (To: Mescinius Rufus; From: Cicero)', new Date('1949-01-01'), new Date((new Date('1949-01-01')).getTime() + 1400*60000) ],
+[ 'Neutral', null, 'Att. 7.12 (To: Atticus; From: Cicero)', new Date('1949-01-22'), new Date((new Date('1949-01-22')).getTime() + 1400*60000) ],
+[ 'Neutral', null, 'Att. 7.13A (To: Atticus; From: Cicero)', new Date('1949-01-24'), new Date((new Date('1949-01-24')).getTime() + 1400*60000) ],
+[ 'Neutral', null, 'Att. 7.14 (To: Atticus; From: Cicero)', new Date('1949-01-25'), new Date((new Date('1949-01-25')).getTime() + 1400*60000) ],
+[ 'Neutral', null, 'Att. 7.15 (To: Atticus; From: Cicero)', new Date('1949-01-26'), new Date((new Date('1949-01-26')).getTime() + 1400*60000) ],
+[ 'Neutral', null, 'Fam. 16.12 (To: Tiro; From: Cicero)', new Date('1949-01-27'), new Date((new Date('1949-01-27')).getTime() + 1400*60000) ],
+[ 'Neutral', null, 'Att. 7.16 (To: Atticus; From: Cicero)', new Date('1949-01-28'), new Date((new Date('1949-01-28')).getTime() + 1400*60000) ],
+[ 'Neutral', null, 'Att. 7.19 (To: Atticus; From: Cicero)', new Date('1949-02-03'), new Date((new Date('1949-02-03')).getTime() + 1400*60000) ],
+[ 'Neutral', null, 'Att. 7.24 (To: Atticus; From: Cicero)', new Date('1949-02-01'), new Date((new Date('1949-02-01')).getTime() + 1400*60000) ],
+[ 'Neutral', null, 'Att. 8.12B (To: L. Domitius Ahenobarbus; From: Pompey)', new Date('1949-02-10'), new Date((new Date('1949-02-10')).getTime() + 1400*60000) ],
+[ 'Neutral', null, 'Att. 8.12C (To: L. Domitius Ahenobarbus; From: Pompey)', new Date('1949-02-16'), new Date((new Date('1949-02-16')).getTime() + 1400*60000) ],
+[ 'Neutral', null, 'Att. 8.2 (To: Atticus; From: Cicero)', new Date('1949-02-17'), new Date((new Date('1949-02-17')).getTime() + 1400*60000) ],
+[ 'Neutral', null, 'Att. 8.12D (To: L. Domitius Ahenobarbus; From: Pompey)', new Date('1949-02-17'), new Date((new Date('1949-02-17')).getTime() + 1400*60000) ],
+[ 'Neutral', null, 'Att. 8.12A (To: Consuls; From: Pompey)', new Date('1949-02-17'), new Date((new Date('1949-02-17')).getTime() + 1400*60000) ],
+[ 'Neutral', null, 'Att. 8.11D (To: Pompey; From: Cicero)', new Date('1949-02-27'), new Date((new Date('1949-02-27')).getTime() + 1400*60000) ],
+[ 'Neutral', null, 'Att. 8.15A (To: L. Cornelius Balbus; From: Cicero)', new Date('1949-03-03'), new Date((new Date('1949-03-03')).getTime() + 1400*60000) ],
+[ 'Neutral', null, 'Att. 8.14 (To: Atticus; From: Cicero)', new Date('1949-03-02'), new Date((new Date('1949-03-02')).getTime() + 1400*60000) ],
+[ 'Neutral', null, 'Att. 8.15 (To: Atticus; From: Cicero)', new Date('1949-03-03'), new Date((new Date('1949-03-03')).getTime() + 1400*60000) ],
+[ 'Neutral', null, 'Att. 9.7C (To: C. Opius and Cornelius Balbus; From: Caesar)', new Date('1949-03-01'), new Date((new Date('1949-03-01')).getTime() + 1400*60000) ],
+[ 'Neutral', null, 'Att. 9.2 (To: Atticus; From: Cicero)', new Date('1949-03-07'), new Date((new Date('1949-03-07')).getTime() + 1400*60000) ],
+[ 'Neutral', null, 'Att. 9.3 (To: Atticus; From: Cicero)', new Date('1949-03-09'), new Date((new Date('1949-03-09')).getTime() + 1400*60000) ],
+[ 'Neutral', null, 'Att. 9.7A (To: Cicero; From: L. Cornelius Balbus and Gaius Oppius)', new Date('1949-03-03'), new Date((new Date('1949-03-03')).getTime() + 1400*60000) ],
+[ 'Neutral', null, 'Att. 9.9 (To: Atticus; From: Cicero)', new Date('1949-03-17'), new Date((new Date('1949-03-17')).getTime() + 1400*60000) ],
+[ 'Neutral', null, 'Att. 9.11A (To: Caesar; From: Cicero)', new Date('1949-03-19'), new Date((new Date('1949-03-19')).getTime() + 1400*60000) ],
+[ 'Neutral', null, 'Att. 9.13 (To: Atticus; From: Cicero)', new Date('1949-03-23'), new Date((new Date('1949-03-23')).getTime() + 1400*60000) ],
+[ 'Neutral', null, 'Att. 9.13A (To: Cicero; From: Balbus)', new Date('1949-03-20'), new Date((new Date('1949-03-20')).getTime() + 1400*60000) ],
+[ 'Neutral', null, 'Att. 9.14 (To: Atticus; From: Cicero)', new Date('1949-03-25'), new Date((new Date('1949-03-25')).getTime() + 1400*60000) ],
+[ 'Neutral', null, 'Att. 9.15 (To: Atticus; From: Cicero)', new Date('1949-03-25'), new Date((new Date('1949-03-25')).getTime() + 1400*60000) ],
+[ 'Neutral', null, 'Att. 9.15A (To: Cicero; From: Matius and Trebatius)', new Date('1949-03-23'), new Date((new Date('1949-03-23')).getTime() + 1400*60000) ],
+[ 'Neutral', null, 'Att. 9.18 (To: Atticus; From: Cicero)', new Date('1949-03-29'), new Date((new Date('1949-03-29')).getTime() + 1400*60000) ],
+[ 'Neutral', null, 'Att. 10.1 (To: Atticus; From: Cicero)', new Date('1949-04-03'), new Date((new Date('1949-04-03')).getTime() + 1400*60000) ],
+[ 'Neutral', null, 'Att. 10.3 (To: Atticus; From: Cicero)', new Date('1949-04-07'), new Date((new Date('1949-04-07')).getTime() + 1400*60000) ],
+[ 'Neutral', null, 'Att. 10.3A (To: Atticus; From: Cicero)', new Date('1949-04-07'), new Date((new Date('1949-04-07')).getTime() + 1400*60000) ],
+[ 'Neutral', null, 'Att. 10.6 (To: Atticus; From: Cicero)', new Date('1949-04-26'), new Date((new Date('1949-04-26')).getTime() + 1400*60000) ],
+[ 'Neutral', null, 'Fam. 2.16 (To: M. Caelius Rufus; From: Cicero)', new Date('1949-05-01'), new Date((new Date('1949-05-01')).getTime() + 1400*60000) ],
+[ 'Neutral', null, 'Att. 10.8 (To: Atticus; From: Cicero)', new Date('1949-05-02'), new Date((new Date('1949-05-02')).getTime() + 1400*60000) ],
+[ 'Neutral', null, 'Att. 10.14 (To: Atticus; From: Cicero)', new Date('1949-05-08'), new Date((new Date('1949-05-08')).getTime() + 1400*60000) ],
+[ 'Negative', null, 'Att. 7.10 (To: Atticus; From: Cicero)', new Date('1949-01-17'), new Date((new Date('1949-01-17')).getTime() + 1400*60000) ],
+[ 'Negative', null, 'Att. 7.11 (To: Atticus; From: Cicero)', new Date('1949-01-19'), new Date((new Date('1949-01-19')).getTime() + 1400*60000) ],
+[ 'Negative', null, 'Att. 7.13 (To: Atticus; From: Cicero)', new Date('1949-01-23'), new Date((new Date('1949-01-23')).getTime() + 1400*60000) ],
+[ 'Negative', null, 'Att. 7.20 (To: Atticus; From: Cicero)', new Date('1949-02-05'), new Date((new Date('1949-02-05')).getTime() + 1400*60000) ],
+[ 'Negative', null, 'Att. 7.21 (To: Atticus; From: Cicero)', new Date('1949-02-08'), new Date((new Date('1949-02-08')).getTime() + 1400*60000) ],
+[ 'Negative', null, 'Att. 7.22 (To: Atticus; From: Cicero)', new Date('1949-02-09'), new Date((new Date('1949-02-09')).getTime() + 1400*60000) ],
+[ 'Negative', null, 'Att. 7.23 (To: Atticus; From: Cicero)', new Date('1949-02-10'), new Date((new Date('1949-02-10')).getTime() + 1400*60000) ],
+[ 'Negative', null, 'Att. 8.1 (To: Atticus; From: Cicero)', new Date('1949-02-16'), new Date((new Date('1949-02-16')).getTime() + 1400*60000) ],
+[ 'Negative', null, 'Att. 8.3 (To: Atticus; From: Cicero)', new Date('1949-02-19'), new Date((new Date('1949-02-19')).getTime() + 1400*60000) ],
+[ 'Negative', null, 'Att. 8.7 (To: Atticus; From: Cicero)', new Date('1949-02-23'), new Date((new Date('1949-02-23')).getTime() + 1400*60000) ],
+[ 'Negative', null, 'Att. 8.4 (To: Atticus; From: Cicero)', new Date('1949-02-22'), new Date((new Date('1949-02-22')).getTime() + 1400*60000) ],
+[ 'Negative', null, 'Att. 8.8 (To: Atticus; From: Cicero)', new Date('1949-02-24'), new Date((new Date('1949-02-24')).getTime() + 1400*60000) ],
+[ 'Negative', null, 'Att. 8.9A (To: Atticus; From: Cicero)', new Date('1949-02-25'), new Date((new Date('1949-02-25')).getTime() + 1400*60000) ],
+[ 'Negative', null, 'Att. 8.11 (To: Atticus; From: Cicero)', new Date('1949-02-27'), new Date((new Date('1949-02-27')).getTime() + 1400*60000) ],
+[ 'Negative', null, 'Att. 8.12 (To: Atticus; From: Cicero)', new Date('1949-02-28'), new Date((new Date('1949-02-28')).getTime() + 1400*60000) ],
+[ 'Negative', null, 'Att. 8.13 (To: Atticus; From: Cicero)', new Date('1949-03-01'), new Date((new Date('1949-03-01')).getTime() + 1400*60000) ],
+[ 'Negative', null, 'Att. 8.16 (To: Atticus; From: Cicero)', new Date('1949-03-03'), new Date((new Date('1949-03-03')).getTime() + 1400*60000) ],
+[ 'Negative', null, 'Att. 9.1 (To: Atticus; From: Cicero)', new Date('1949-03-06'), new Date((new Date('1949-03-06')).getTime() + 1400*60000) ],
+[ 'Negative', null, 'Att. 9.2A (To: Atticus; From: Cicero)', new Date('1949-03-08'), new Date((new Date('1949-03-08')).getTime() + 1400*60000) ],
+[ 'Negative', null, 'Fam. 8.15 (To: Cicero; From: M. Caelius Rufus)', new Date('1949-03-10'), new Date((new Date('1949-03-10')).getTime() + 1400*60000) ],
+[ 'Negative', null, 'Att. 9.7B (To: Cicero; From: L. Cornelius Balbus)', new Date('1949-03-06'), new Date((new Date('1949-03-06')).getTime() + 1400*60000) ],
+[ 'Negative', null, 'Att. 9.5 (To: Atticus; From: Cicero)', new Date('1949-03-10'), new Date((new Date('1949-03-10')).getTime() + 1400*60000) ],
+[ 'Negative', null, 'Att. 9.6 (To: Atticus; From: Cicero)', new Date('1949-03-11'), new Date((new Date('1949-03-11')).getTime() + 1400*60000) ],
+[ 'Negative', null, 'Att. 9.7 (To: Atticus; From: Cicero)', new Date('1949-03-13'), new Date((new Date('1949-03-13')).getTime() + 1400*60000) ],
+[ 'Negative', null, 'Att. 9.11 (To: Atticus; From: Cicero)', new Date('1949-03-20'), new Date((new Date('1949-03-20')).getTime() + 1400*60000) ],
+[ 'Negative', null, 'Att. 9.19 (To: Atticus; From: Cicero)', new Date('1949-04-01'), new Date((new Date('1949-04-01')).getTime() + 1400*60000) ],
+[ 'Negative', null, 'Att. 10.4 (To: Atticus; From: Cicero)', new Date('1949-04-14'), new Date((new Date('1949-04-14')).getTime() + 1400*60000) ],
+[ 'Negative', null, 'Att. 10.8a (To: Cicero; From: M. Antonius)', new Date('1949-04-30'), new Date((new Date('1949-04-30')).getTime() + 1400*60000) ],
+[ 'Negative', null, 'Att. 10.9 (To: Atticus; From: Cicero)', new Date('1949-05-03'), new Date((new Date('1949-05-03')).getTime() + 1400*60000) ]]);
+	      var options = {
+		  title: "Sentiment towards Pompey in Cicero's Corresponsance",
+		  timeline: {
+		      showBarLabels: false
+                  },
+                  colors: ['#7CFC00', '#3498db', '#c0392b']
+              };
+              chart.draw(dataTable, options);
+
+
+	      // When we have a select event, open the letter and deselect. 
+	      function selectHandler(e) {
+		  var selection = chart.getSelection();
+		  if (selection.length > 0) {
+		      var item = dataTable.getFormattedValue(selection[0].row, 2).split(" ");
+		      window.open('http://perseus.uchicago.edu/perseus-cgi/citequery3.pl?dbname=PerseusLatinTexts&getid=1&query=Cic.%20' + item[0] + '%20' + item[1], '_blank');
+		  }
+		  //chart.setSelection(null);
+	      }
+	      google.visualization.events.addListener(chart, 'select', selectHandler);
+	  }	  
+      
+  </script>
+</head>
+<body>
+  <div id="timeline-tooltip" style="width: 1200px; height: 900px; margin: auto;"></div>
+</body>
+</html>

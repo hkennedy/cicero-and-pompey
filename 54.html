@@ -1,0 +1,64 @@
+<html>
+<head>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+  <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+  <script type="text/javascript">
+    google.charts.load("upcoming", {packages:["timeline"]});
+    google.charts.setOnLoadCallback(drawChart);
+
+    function drawChart() {
+	var container = document.getElementById('timeline-tooltip');
+        var chart = new google.visualization.Timeline(container);
+        var dataTable = new google.visualization.DataTable();
+
+	dataTable.addColumn({ type: 'string', id: 'President' });
+        dataTable.addColumn({ type: 'string', id: 'dummy bar label' });
+        dataTable.addColumn({ type: 'string', role: 'tooltip' });
+        dataTable.addColumn({ type: 'date', id: 'Start' });
+        dataTable.addColumn({ type: 'date', id: 'End' });
+	
+dataTable.addRows([
+[ 'Positive', null, 'Q. fr. 2.14 (To: Quintus Cicero; From: Cicero)', new Date('1954-07-01'), new Date((new Date('1954-07-01')).getTime() + 1400*60000) ],
+[ 'Positive', null, 'Att. 4.19 (To: Atticus; From: Cicero)', new Date('1954-11-01'), new Date((new Date('1954-11-01')).getTime() + 1400*60000) ],
+[ 'Neutral', null, 'Q. fr. 3.2 (To: Quintus Cicero; From: Cicero)', new Date('1954-10-01'), new Date((new Date('1954-10-01')).getTime() + 1400*60000) ],
+[ 'Neutral', null, 'Q. fr. 3.3 (To: Quintus Cicero; From: Cicero)', new Date('1954-10-01'), new Date((new Date('1954-10-01')).getTime() + 1400*60000) ],
+[ 'Neutral', null, 'Q. fr. 3.7 (To: Quintus Cicero; From: Cicero)', new Date('1954-11-01'), new Date((new Date('1954-11-01')).getTime() + 1400*60000) ],
+[ 'Negative', null, 'Q. fr. 2.11 (To: Quintus Cicero; From: Cicero)', new Date('1954-02-15'), new Date((new Date('1954-02-15')).getTime() + 1400*60000) ],
+[ 'Negative', null, 'Fam. 7.5 (To: Caesar; From: Cicero)', new Date('1954-02-01'), new Date((new Date('1954-02-01')).getTime() + 1400*60000) ],
+[ 'Negative', null, 'Att. 4.16 (To: Atticus; From: Cicero)', new Date('1954-06-24'), new Date((new Date('1954-06-24')).getTime() + 1400*60000) ],
+[ 'Negative', null, 'Att. 4.15 (To: Atticus; From: Cicero)', new Date('1954-07-27'), new Date((new Date('1954-07-27')).getTime() + 1400*60000) ],
+[ 'Negative', null, 'Q. fr. 3.1 (To: Quintus Cicero; From: Cicero)', new Date('1954-09-28'), new Date((new Date('1954-09-28')).getTime() + 1400*60000) ],
+[ 'Negative', null, 'Att. 4.17 (To: Atticus; From: Cicero)', new Date('1954-10-01'), new Date((new Date('1954-10-01')).getTime() + 1400*60000) ],
+[ 'Negative', null, 'Fam. 7.17 (To: C. Trebatius Testa; From: Cicero)', new Date('1954-09-01'), new Date((new Date('1954-09-01')).getTime() + 1400*60000) ],
+[ 'Negative', null, 'Q. fr. 3.4 (To: Quintus Cicero; From: Cicero)', new Date('1954-10-24'), new Date((new Date('1954-10-24')).getTime() + 1400*60000) ],
+[ 'Negative', null, 'Att. 4.18 (To: Atticus; From: Cicero)', new Date('1954-10-24'), new Date((new Date('1954-10-24')).getTime() + 1400*60000) ],
+[ 'Negative', null, 'Q. fr. 3.5 (To: Quintus Cicero; From: Cicero)', new Date('1954-10-01'), new Date((new Date('1954-10-01')).getTime() + 1400*60000) ],
+[ 'Negative', null, 'Fam. 1.9 (To: P. Lentulus Spinther; From: Cicero)', new Date('1954-10-01'), new Date((new Date('1954-10-01')).getTime() + 1400*60000) ]]);
+	      var options = {
+		  title: "Sentiment towards Pompey in Cicero's Corresponsance",
+		  timeline: {
+		      showBarLabels: false
+                  },
+                  colors: ['#7CFC00', '#3498db', '#c0392b']
+              };
+              chart.draw(dataTable, options);
+
+
+	      // When we have a select event, open the letter and deselect. 
+	      function selectHandler(e) {
+		  var selection = chart.getSelection();
+		  if (selection.length > 0) {
+		      var item = dataTable.getFormattedValue(selection[0].row, 2).split(" ");
+		      window.open('http://perseus.uchicago.edu/perseus-cgi/citequery3.pl?dbname=PerseusLatinTexts&getid=1&query=Cic.%20' + item[0] + '%20' + item[1], '_blank');
+		  }
+		  //chart.setSelection(null);
+	      }
+	      google.visualization.events.addListener(chart, 'select', selectHandler);
+	  }	  
+      
+  </script>
+</head>
+<body>
+  <div id="timeline-tooltip" style="width: 1200px; height: 900px; margin: auto;"></div>
+</body>
+</html>
