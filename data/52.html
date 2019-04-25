@@ -1,0 +1,49 @@
+<html>
+<head>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+  <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+  <script type="text/javascript">
+    google.charts.load("upcoming", {packages:["timeline"]});
+    google.charts.setOnLoadCallback(drawChart);
+
+    function drawChart() {
+	var container = document.getElementById('timeline-tooltip');
+        var chart = new google.visualization.Timeline(container);
+        var dataTable = new google.visualization.DataTable();
+
+	dataTable.addColumn({ type: 'string', id: 'President' });
+        dataTable.addColumn({ type: 'string', id: 'dummy bar label' });
+        dataTable.addColumn({ type: 'string', role: 'tooltip' });
+        dataTable.addColumn({ type: 'date', id: 'Start' });
+        dataTable.addColumn({ type: 'date', id: 'End' });
+	
+dataTable.addRows([
+[ 'Negative', null, 'Fam. 5.18 (To: T. Fadius; From: Cicero)', new Date('1952-12-01'), new Date((new Date('1952-12-01')).getTime() + 1400*60000) ]]);
+	      var options = {
+		  title: "Sentiment towards Pompey in Cicero's Corresponsance",
+		  timeline: {
+		      showBarLabels: false
+                  },
+                  colors: ['#7CFC00', '#3498db', '#c0392b']
+              };
+              chart.draw(dataTable, options);
+
+
+	      // When we have a select event, open the letter and deselect. 
+	      function selectHandler(e) {
+		  var selection = chart.getSelection();
+		  if (selection.length > 0) {
+		      var item = dataTable.getFormattedValue(selection[0].row, 2).split(" ");
+		      window.open('http://perseus.uchicago.edu/perseus-cgi/citequery3.pl?dbname=PerseusLatinTexts&getid=1&query=Cic.%20' + item[0] + '%20' + item[1], '_blank');
+		  }
+		  //chart.setSelection(null);
+	      }
+	      google.visualization.events.addListener(chart, 'select', selectHandler);
+	  }	  
+      
+  </script>
+</head>
+<body>
+  <div id="timeline-tooltip" style="width: 1200px; height: 900px; margin: auto;"></div>
+</body>
+</html>
