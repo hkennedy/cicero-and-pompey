@@ -1,9 +1,18 @@
 p {
     width: 45%;
     margin: auto;
+    text-indent: 5%;
     padding-bottom: 25px;
 }
 
 h1 {
     text-align: center;
+}
+
+h2 {
+    text-align: center;
+}
+
+.intro {
+    padding-top: 50px;
 }
