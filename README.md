@@ -1,5 +1,5 @@
 # Cicero and Pompey
-This is a final project done for CL406, New Approaches to Cicero, at Boston University during the Spring 2019 semester. The web page can be viewed [here](https://hkennedy.github.io/cicero-and-pompey/). The raw data can be viewed in `data/raw_data.csv`, and `data/process.py` is the python script where all the magic happens.
+This is a final project done for CL406, New Approaches to Cicero, at Boston University during the Spring 2019 semester. The web page can be viewed [here](https://hkennedy.github.io/cicero-and-pompey/). The raw data can be viewed in `data/raw_data.csv`, and `data/process.py` is the python script where all the magic happens. If you have any questions, don't hesitate to reach out! My email is hek@bu.edu.
 
 -----------------
 
