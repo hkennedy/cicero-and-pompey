@@ -52,9 +52,13 @@ dataTable.addRows([
 	      function selectHandler(e) {
 		  var selection = chart.getSelection();
 		  if (selection.length > 0) {
-		      var item = dataTable.getFormattedValue(selection[0].row, 2).split(" ");
-		      window.open('http://perseus.uchicago.edu/perseus-cgi/citequery3.pl?dbname=PerseusLatinTexts&getid=1&query=Cic.%20' + item[0] + '%20' + item[1], '_blank');
-		  }
+                      var item = dataTable.getFormattedValue(selection[0].row, 2).split(" ");
+                      if (item[0] == "Q.") {
+                          window.open('http://perseus.uchicago.edu/perseus-cgi/citequery3.pl?dbname=PerseusLatinTexts&getid=1&query=Cic.%20' + item[0] + '%20' + item[1] + '%20' + item[2], '_blank');
+                      } else {
+		          window.open('http://perseus.uchicago.edu/perseus-cgi/citequery3.pl?dbname=PerseusLatinTexts&getid=1&query=Cic.%20' + item[0] + '%20' + item[1], '_blank');
+                      } 
+                  }
 		  //chart.setSelection(null);
 	      }
 	      google.visualization.events.addListener(chart, 'select', selectHandler);
